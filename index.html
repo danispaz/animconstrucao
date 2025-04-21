@@ -8,30 +8,32 @@
     html, body {
       margin: 0;
       padding: 0;
-      height: 100%;
-      width: 100%;
-     
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      background-color: #113b66; /* cor de fundo */
+      height: 100vh;
+      overflow: hidden; /* remove qualquer barra de rolagem */
     }
 
     #lottie-container {
-      width: 250px;
-      height: 250px;
+      width: 100%;
+      max-width: 300px;
+      margin: 0 auto;
+      padding-top: 30px; /* opcional: distância do topo */
     }
 
-    @media (min-width: 768px) {
-      #lottie-container {
-        width: 300px;
-        height: 300px;
-      }
+    .wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      height: 100vh;
+      width: 100vw;
     }
   </style>
 </head>
 <body>
 
-  <div id="lottie-container"></div>
+  <div class="wrapper">
+    <div id="lottie-container"></div>
+  </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.1/lottie.min.js"></script>
   <script>
@@ -40,7 +42,7 @@
       renderer: 'svg',
       loop: true,
       autoplay: true,
-      path: 'consutruccao.json' // Coloque esse arquivo na mesma pasta do HTML
+      path: 'consutruccao.json'
     });
   </script>
 
